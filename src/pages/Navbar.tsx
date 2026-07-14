@@ -20,15 +20,15 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full flex  grid grid-cols-3  items-center justify-center h-15 shadow shadow-black shadow-md/20 bg-white">
+      <nav className="w-full flex  grid grid-cols-3  items-center justify-center h-15 shadow shadow-black shadow-md/20 bg-white dark:bg-[#2D2D2D]">
         <div className="flex justify-start pl-5">
           <ThemeButton />
         </div>
 
-        <h1 className="font-alfa">resyin.dev</h1>
+        <h1 className="font-alfa dark:text-white">resyin.dev</h1>
         <div className="flex justify-end pr-5 z-50">
           <button onClick={toggleMenu} className="text-2xl">
-            {isOpen ? <FaTimes className="text-[#1E1E1E]"/> : <FaBars />}
+            {isOpen ? <FaTimes className="text-[#1E1E1E] dark:text-white"/> : <FaBars className="dark:text-white" />}
           </button>
         </div>
       </nav>

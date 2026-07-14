@@ -5,8 +5,11 @@ import profile from "../assets/profile1.png";
 export const About = () => {
   return (
     <>
-      <section id="about" className="flex items-center grid grid-cols-2 pt-20 px-5 gap-5">
-        <div className="relative w-35 h-40 col-1 rounded-4xl outline-2 outline-offset-4 outline-[#2D2D2D] bg-[#2D2D2D]">
+      <section
+        id="about"
+        className="flex items-center grid grid-cols-2 pt-20 px-5 gap-5"
+      >
+        <div className="relative w-35 h-40 col-1 rounded-4xl outline-4 outline-offset-4 outline-[#2D2D2D] bg-[#2D2D2D] dark:outline-white">
           <img
             src={profile}
             alt="Profile"
@@ -25,10 +28,12 @@ export const About = () => {
           </div>
         </div>
 
-        <div className="col-2 text-justify">
+        <div className="col-2 text-justify dark:text-white">
           <h3 className="font-alfa text-md pb-5">Resyin V.H.</h3>
-          <p className="font-alice text-sm">I help companies turn ideas into functional and visually appealing websites using modern frontend technologies.
-</p>
+          <p className="font-alice text-sm">
+            I help companies turn ideas into functional and visually appealing
+            websites using modern frontend technologies.
+          </p>
         </div>
       </section>
     </>

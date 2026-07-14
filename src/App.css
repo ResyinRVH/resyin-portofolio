@@ -21,6 +21,7 @@ html {
   --font-alfa: "Alfa Slab One", sans-serif;
   --font-alice: "Alice", sans-serif;
 }
+@custom-variant dark (&:is(.dark *));
 
 .hide-scrollbar {
   -ms-overflow-style: none; /* Internet Explorer & Edge */

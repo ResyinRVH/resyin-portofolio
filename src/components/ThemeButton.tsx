@@ -4,22 +4,20 @@ import { MdOutlineNightlight } from "react-icons/md";
 
 
 export const ThemeButton = () => {
-  const [lightMode, setLightmode] = useState(false);
+  const [isDark, setIsDark] = useState(true);
 
-  useEffect(() => {
-    if (lightMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [lightMode]);
+useEffect(() => {
+  document.documentElement.classList.toggle("dark", isDark);
+
+  console.log(document.documentElement.className)
+}, [isDark]);
 
   return (
     <button
-      onClick={() => setLightmode(!lightMode)}
+      onClick={() => setIsDark(!isDark)}
       className="rounded-lg transition"
     >
-      {lightMode ? <CiLight className="px-1 bg-[#BBDC12] rounded-full text-[#2D2D2D] text-3xl cursor-pointer hover:text-white" /> : <MdOutlineNightlight className="px-1 bg-[#BBDC12] rounded-full text-[#2D2D2D] text-3xl cursor-pointer hover:text-white" />}
+      {isDark ? <CiLight className="px-1 bg-[#BBDC12] rounded-full text-[#2D2D2D] text-3xl cursor-pointer hover:text-white" /> : <MdOutlineNightlight className="px-1 bg-[#BBDC12] rounded-full text-[#2D2D2D] text-3xl cursor-pointer hover:text-white" />}
     </button>
   );
 };

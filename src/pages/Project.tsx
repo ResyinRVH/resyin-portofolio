@@ -19,10 +19,10 @@ export const Project = () => {
   ];
   return (
     <>
-      <section id="project" className="pt-20 ">
-        <div className=" text-left pt-10 bg-[#F3F3F3]">
+      <section id="project" className=" ">
+        <div className=" text-left pt-10 bg-[#F3F3F3] dark:bg-[#2D2D2D] ">
           <div className="px-5">
-            <h1 className="font-alfa">My Project</h1>
+            <h1 className="font-alfa dark:text-white">My Project</h1>
           </div>
 
           <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar">
