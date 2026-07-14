@@ -20,7 +20,7 @@ export const Project = () => {
   return (
     <>
       <section id="project" className="pt-20 ">
-        <div className=" text-left pt-10 bg-[#F2F0F0]">
+        <div className=" text-left pt-10 bg-[#F3F3F3]">
           <div className="px-5">
             <h1 className="font-alfa">My Project</h1>
           </div>
