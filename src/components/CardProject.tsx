@@ -27,7 +27,8 @@ export const CardProject = ({
           <div className="w-full h-full flex justify-center items-center">
             <button 
             onClick={() => window.open("https://wmj-landing-pages.vercel.app/", "_blank")}
-            className="w-10 h-10 flex justify-center items-center bg-linear-to-bl from-[#BBDC12] via-[#8ECA3C] to-[#276F27] rounded-full cursor-pointer">
+            className="w-10 h-10 flex justify-center items-center bg-linear-to-bl from-[#BBDC12] via-[#8ECA3C] to-[#276F27] rounded-full cursor-pointer hover:brightness-115
+    active:brightness-130">
               <FaArrowRight className="text-white hover:text-[#1E1E1E] text-xl" />
             </button>
           </div>
