@@ -20,7 +20,7 @@ export const Hero = () => {
           </a>
           <a
             href="#contact"
-            className="text-sm py-2 border-2 border-[#2D2D2D] hover:border-[#BBDC12] rounded-md col-start-3 col-end-5 hover:brightness-110 active:brightness-130"
+            className="text-sm py-2 border-2 border-[#2D2D2D] hover:border-[#BBDC12] rounded-md col-start-3 col-end-5 hover:brightness-110 active:border-[#BBDC12]"
           >
             Contact Me
           </a>
