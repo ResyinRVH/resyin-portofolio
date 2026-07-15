@@ -20,7 +20,9 @@ html {
 @theme {
   --font-alfa: "Alfa Slab One", sans-serif;
   --font-alice: "Alice", sans-serif;
+  --shadow-rb: 10px 10px 20px rgb(0 0 0 / 0.2);
 }
+
 @custom-variant dark (&:is(.dark *));
 
 .hide-scrollbar {

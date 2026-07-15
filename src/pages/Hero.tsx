@@ -21,7 +21,7 @@ export const Hero = () => {
           <div className="grid grid-cols-4 gap-5 px-5  pt-10 flex items-center font-alice">
             <a
               href="#project"
-              className="text-sm py-2 px-5 bg-linear-to-r from-[#BBDC12] via-[#8ECA3C] to-[#276F27] hover:text-white rounded-md col-start-1 col-end-3 shadow-md/20 hover:brightness-115 active:brightness-125 dark:hover:text-white"
+              className="text-sm py-2 px-5 bg-linear-to-r from-[#BBDC12] via-[#8ECA3C] to-[#276F27] rounded-md col-start-1 col-end-3 shadow-md/20 hover:brightness-125 active:brightness-85"
             >
               View My Project
             </a>

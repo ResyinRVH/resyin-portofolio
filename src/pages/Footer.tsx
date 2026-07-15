@@ -1,5 +1,10 @@
 import "../App.css";
 import { FaRegCopyright } from "react-icons/fa";
+import { SocialMedia } from "../components/SocialMedia";
+import { FaWhatsapp } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -9,15 +14,52 @@ export const Footer = () => {
 
         <div className="w-full h-40 pb-5 bg-linear-to-b from-[#BBDC12] via-[#8ECA3C] to-[#276F27]">
           <div className="relative ">
-            <div className="w-80 px-5 py-5 bg-white border-4 border-[#8ECA3C] shadow-md/30 rounded-2xl absolute left-1/2 -top-25 -translate-x-1/2 w-80 dark:bg-[#2D2D2D] dark:border-white">
+            <div className="w-80 px-5 py-5 bg-white border-4 border-[#8ECA3C] shadow-md/30 rounded-2xl absolute left-1/2 -top-20 -translate-x-1/2 w-80 dark:bg-[#2D2D2D] dark:border-white">
               <h3 className="pb-5 font-alfa bg-gradient-to-r from-[#BBDC12] via-[#8ECA3C] to-[#276F27] bg-clip-text text-transparent dark:text-white">
                 Available for remote frontend opportunities
               </h3>
-              <div className="font-alice text-left text-sm dark:text-white ">
-                <p>Whatsapp: +62 856-0756-3796</p>
-                <p>Email: resyin9b@gmail.com</p>
-                <p>Linkedin: Resyin Virzasa Hendriyanti</p>
-                <p>GitHub: github.com/resyin</p>
+              <div className="flex justify-center gap-2 ">
+                <button
+                  onClick={() =>
+                    window.open("https://wa.me/6282229535137", "_blank")
+                  }
+                >
+                  <SocialMedia
+                    icon={FaWhatsapp}
+                    color="text-[#276F27] text-md dark:text-white "
+                  />
+                </button>
+                <button
+                  onClick={() => {
+                    window.location.href =
+                      "mailto:resyin9b@gmail.com";
+                  }}
+                >
+                  <SocialMedia
+                    icon={SiGmail}
+                    color="text-[#276F27] text-md dark:text-white"
+                  />
+                </button>
+                <button
+                  onClick={() =>
+                    window.open("https://linkedin.com/in/resyin-virzasa-hendriyanti", "_blank")
+                  }
+                >
+                  <SocialMedia
+                    icon={FaLinkedin}
+                    color="text-[#276F27] text-md dark:text-white"
+                  />
+                </button>
+                <button
+                  onClick={() =>
+                    window.open("https://github.com/ResyinRVH", "_blank")
+                  }
+                >
+                  <SocialMedia
+                    icon={FaGithub}
+                    color="text-[#276F27] text-md dark:text-white"
+                  />
+                </button>
               </div>
             </div>
           </div>

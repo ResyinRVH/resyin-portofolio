@@ -1,6 +1,6 @@
 import type { IconType } from "react-icons";
 
-export type CardSkillProps = {
+export type CardIconProps = {
   icon: IconType;
   color: string;
 };
