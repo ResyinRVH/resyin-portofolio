@@ -1,6 +1,7 @@
 import "../App.css";
 import { CardProject } from "../components/CardProject";
 import restaurant from "../assets/restaurant.jpeg";
+import portofolio from "../assets/portofolio.png";
 
 export const Project = () => {
   const ProjectItems = [
@@ -9,24 +10,14 @@ export const Project = () => {
       technical: "React, Typescript, Tailwind CSS",
       image: restaurant,
       altText: "restaurant",
+      url:"https://wmj-landing-pages.vercel.app/",
     },
     {
-      projectName: "Restaurant Landing Page",
+      projectName: "Portofolio Web",
       technical: "React, Typescript, Tailwind CSS",
-      image: restaurant,
-      altText: "restaurant",
-    },
-    {
-      projectName: "Restaurant Landing Page",
-      technical: "React, Typescript, Tailwind CSS",
-      image: restaurant,
-      altText: "restaurant",
-    },
-    {
-      projectName: "Restaurant Landing Page",
-      technical: "React, Typescript, Tailwind CSS",
-      image: restaurant,
-      altText: "restaurant",
+      image: portofolio,
+      altText: "portofolio",
+      url:"https://resyindev.vercel.app/",
     },
   ];
   return (
@@ -37,7 +28,7 @@ export const Project = () => {
             <h1 className="font-alfa dark:text-white transition-text duration-500">My Project</h1>
           </div>
 
-          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:pl-5 lg:pl-10">
+          <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar md:pl-5 lg:pl-10 md:pr-5 lg:pr-10">
             {ProjectItems.map((item, idx) => (
               <div key={idx} className="w-80 px-5 py-10 shrink-0 snap-center">
                 <CardProject {...item} />

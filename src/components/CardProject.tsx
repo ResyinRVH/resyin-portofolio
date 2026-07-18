@@ -7,12 +7,13 @@ export const CardProject = ({
   technical,
   image,
   altText,
+  url,
 }: ProjectList) => {
   return (
     <>
-      <div className="w-full px-4 py-4 border-white border-7 bg-linear-to-b from-[#BBDC12] via-[#8ECA3C] to-[#276F27] rounded-3xl shadow-rb active:shadow-[#8ECA3C] ">
+      <div className="w-full h-95 px-4 py-4 border-white border-7 bg-linear-to-b from-[#BBDC12] via-[#8ECA3C] to-[#276F27] rounded-3xl shadow-rb active:shadow-[#8ECA3C] ">
 
-        <div className="bg-white h-55 rounded-2xl ">
+        <div className="bg-white h-55 rounded-3xl ">
           <img
             src={image}
             alt={altText}
@@ -27,7 +28,7 @@ export const CardProject = ({
           </div>
           <div className="w-full h-full flex justify-center items-center">
             <button 
-            onClick={() => window.open("https://wmj-landing-pages.vercel.app/", "_blank")}
+            onClick={() => window.open(url, "_blank", "noopener,noreferrer")}
             className="w-10 h-10 flex justify-center items-center bg-linear-to-b from-[#BBDC12] via-[#8ECA3C] to-[#276F27] rounded-full cursor-pointer hover:brightness-85 active:brightness-85">
               <FaArrowRight className="text-white text-xl" />
             </button>

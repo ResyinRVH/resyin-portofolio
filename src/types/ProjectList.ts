@@ -3,4 +3,5 @@ export interface ProjectList {
   technical: string;
   image?: string;
   altText: string;
+  url: string;
 }
