@@ -19,7 +19,7 @@ export const About = () => {
             <div className="h-10 px-4 flex justify-between items-center rounded-xl border-2 bg-linear-to-r from-[#276F27] via-[#8ECA3C] to-[#BBDC12] text-white text-left text-xs">
               <div className="pr-4">
                 <h5 className="font-alice">My Project</h5>
-                <h5 className="font-alfa">12+</h5>
+                <h5 className="font-alfa">3</h5>
               </div>
               <button>
                 <FaArrowRight className="" />
