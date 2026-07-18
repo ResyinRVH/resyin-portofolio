@@ -17,7 +17,7 @@ useEffect(() => {
       onClick={() => setIsDark(!isDark)}
       className="rounded-lg transition"
     >
-      {isDark ? <CiLight className="px-1 bg-[#BBDC12] rounded-full text-[#2D2D2D] text-3xl cursor-pointer hover:text-white" /> : <MdOutlineNightlight className="px-1 bg-[#BBDC12] rounded-full text-[#2D2D2D] text-3xl cursor-pointer hover:text-white" />}
+      {isDark ? <CiLight className="px-1 bg-[#BBDC12] rounded-full text-[#2D2D2D] text-3xl cursor-pointer hover:text-white" /> : <MdOutlineNightlight className="px-1 bg-[#BBDC12] rounded-full text-white text-3xl cursor-pointer hover:text-[#2D2D2D]" />}
     </button>
   );
 };

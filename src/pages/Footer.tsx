@@ -10,15 +10,15 @@ export const Footer = () => {
   return (
     <>
       <footer id="contact" className="w-full relative">
-        <div className="w-full h-40 bg-[#F3F3F3] dark:bg-[#2D2D2D]"></div>
+        <div className="w-full h-30 bg-[#F3F3F3] dark:bg-[#2D2D2D] transition-color duration-500"></div>
 
         <div className="w-full h-40 pb-5 bg-linear-to-b from-[#BBDC12] via-[#8ECA3C] to-[#276F27]">
           <div className="relative ">
-            <div className="w-80 px-5 py-5 bg-white border-4 border-[#8ECA3C] shadow-md/30 rounded-2xl absolute left-1/2 -top-20 -translate-x-1/2 w-80 dark:bg-[#2D2D2D] dark:border-white">
-              <h3 className="pb-5 font-alfa bg-gradient-to-r from-[#BBDC12] via-[#8ECA3C] to-[#276F27] bg-clip-text text-transparent dark:text-white">
+            <div className="w-80 md:w-150 px-5 py-5 bg-white border-4 border-[#8ECA3C] shadow-md/30 rounded-2xl absolute left-1/2 -top-15 -translate-x-1/2 w-80 dark:bg-[#2D2D2D] dark:border-white transition-color duration-500">
+              <h3 className="pb-5 font-alfa bg-gradient-to-r from-[#BBDC12] via-[#8ECA3C] to-[#276F27] bg-clip-text text-transparent dark:text-white transition-text duration-500">
                 Available for remote frontend opportunities
               </h3>
-              <div className="flex justify-center gap-2 ">
+              <div className="flex justify-center gap-2 transition-colors duration-500">
                 <button
                   onClick={() =>
                     window.open("https://wa.me/6282229535137", "_blank")

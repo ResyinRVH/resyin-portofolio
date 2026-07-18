@@ -20,10 +20,10 @@ export const CardProject = ({
           />
         </div>
 
-        <div className="grid grid-cols-4 bg-white border-2 border-[#8ECA3C] rounded-2xl px-3 py-3 mt-5 text-xs flex items-center dark:bg-[#2D2D2D] dark:border-white ">
+        <div className="grid grid-cols-4 bg-white border-2 border-[#8ECA3C] rounded-2xl px-3 py-3 mt-5 text-xs flex items-center dark:bg-[#2D2D2D] dark:border-white transition-colors duration-500">
           <div className="col-start-1 col-end-4 text-[#2D2D2D]">
-            <h3 className="font-alfa dark:text-white">{projectName}</h3>
-            <p className="font-alice dark:text-white">{technical}</p>
+            <h3 className="font-alfa dark:text-white transition-text duration-500">{projectName}</h3>
+            <p className="font-alice dark:text-white transition-text duration-500">{technical}</p>
           </div>
           <div className="w-full h-full flex justify-center items-center">
             <button 
