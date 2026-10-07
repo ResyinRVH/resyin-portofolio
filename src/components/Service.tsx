@@ -55,8 +55,28 @@ export const Services: React.FC = () => {
   };
 
   return (
-    <section id="service" className="scroll-mt-28 py-24 px-6 md:px-20 bg-[#0c0d0f] text-white">
-      <div className="max-w-5xl mx-auto">
+    <section
+      id="service"
+      className="relative scroll-mt-28 py-24 px-6 md:px-20 bg-[#0c0d0f] text-white overflow-hidden"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-12 right-12 md:right-32 w-28 h-28 opacity-25 blur-[10px] rotate-12"
+      >
+        <svg viewBox="0 0 24 24" className="w-full h-full fill-[#E5E800] drop-shadow-[0_0_20px_rgba(229,232,0,0.8)]">
+          <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
+        </svg>
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-24 left-8 md:left-3 w-100 h-100 opacity-20 blur-[30px] -rotate-12"
+      >
+        <svg viewBox="0 0 24 24" className="w-full h-full fill-[#E5E800] drop-shadow-[0_0_15px_rgba(114,207,36,0.7)]">
+          <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
+        </svg>
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
             <div className="flex items-center gap-2 mb-3">
