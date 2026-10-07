@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ServiceCard, ServiceItem } from "@/components/ui/ServiceCard";
+import { ServiceCard, ServiceItem } from "@/ui/ServiceCard";
 
 const serviceData: ServiceItem[] = [
   {

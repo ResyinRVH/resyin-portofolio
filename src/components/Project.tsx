@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ProjectCard, ProjectItem } from "@/components/ui/ProjectCard";
+import { ProjectCard, ProjectItem } from "@/ui/ProjectCard";
 
 const categories = ["All", "Development", "UI/UX Design", "Web3"] as const;
 type CategoryType = (typeof categories)[number];
@@ -32,7 +32,6 @@ const projectData: ProjectItem[] = [
 
 export const Projects: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<CategoryType>("All");
-
   const filteredProjects =
     activeCategory === "All"
       ? projectData
@@ -45,11 +44,11 @@ export const Projects: React.FC = () => {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 -right-24 w-[350px] h-[350px] rounded-full bg-[#72cf24]/10 blur-[130px]"
+        className="pointer-events-none absolute top-1/20 -right-40 w-[300px] h-[300px] rounded-full bg-[#72cf24] blur-[130px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-10 -left-20 w-[300px] h-[300px] rounded-full bg-[#E5E800]/10 blur-[140px]"
+        className="pointer-events-none absolute bottom-1/20 -left-40 w-[300px] h-[300px] rounded-full bg-[#E5E800] blur-[140px]"
       />
 
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -72,8 +71,8 @@ export const Projects: React.FC = () => {
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
                   className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${isActive
-                      ? "bg-white text-black shadow-md"
-                      : "text-neutral-400 hover:text-white hover:bg-white/5"
+                    ? "bg-white text-black shadow-md"
+                    : "text-neutral-400 hover:text-white hover:bg-white/5"
                     }`}
                 >
                   {cat}

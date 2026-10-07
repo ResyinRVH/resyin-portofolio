@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/Button";
-import { GlassCard } from "@/components/ui/GlassCard";
-import { ServiceTicker } from "@/components/ui/ServiceTicker";
+import { Button } from "@/ui/Button";
+import { GlassCard } from "@/ui/GlassCard";
+import { ServiceTicker } from "@/ui/ServiceTicker";
 
 export const Hero: React.FC = () => {
     return (
