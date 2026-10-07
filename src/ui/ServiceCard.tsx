@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-import { Tag } from "@/components/ui/Tag";
-import { Button } from "@/components/ui/Button";
+import { Tag } from "@/ui/TagService";
+import { Button } from "@/ui/Button";
 
 export interface ServiceItem {
   id: string;

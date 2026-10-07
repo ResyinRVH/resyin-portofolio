@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/ui/Button";
 
 export interface ProjectItem {
     id: string;
@@ -30,7 +30,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
-            <div className="flex items-center justify-between gap-3 px-1.5 pb-1">
+            <div className="flex items-center justify-between gap-3 px-4 pb-4">
                 <div className="flex flex-col">
                     <span className="text-[11px] font-semibold tracking-wider uppercase text-neutral-400">
                         {project.category}
