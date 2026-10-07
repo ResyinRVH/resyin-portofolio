@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
             href={link.href}
             className={
               link.name === "Home"
-                ? "text-white font-semibold cursor-default pointer-events-none"
+                ? "text-white font-semibold cursor-pointer"
                 : "text-neutral-400 hover:text-white transition-colors duration-200"
             }
           >

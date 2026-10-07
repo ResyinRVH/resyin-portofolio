@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { Button } from "./ui/Button";
-import { GlassCard } from "./ui/GlassCard";
-import { ServiceTicker } from "./ui/ServiceTicker";
+import { Button } from "@/components/ui/Button";
+import { GlassCard } from "@/components/ui/GlassCard";
+import { ServiceTicker } from "@/components/ui/ServiceTicker";
 
 export const Hero: React.FC = () => {
     return (
         <section id="home" className="relative min-h-screen pt-28 pb-28 flex flex-col justify-between overflow-hidden bg-[#0c0d0f] text-white">
-
             <div className="container mx-auto px-6 max-w-6xl relative z-10 flex-1 flex flex-col justify-center">
                 <div className="text-center mb-8 sm:mb-12">
                     <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold tracking-tight bg-gradient-to-r from-white via-white/30 to-white bg-clip-text text-transparent leading-none">
