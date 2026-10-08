@@ -26,31 +26,31 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
 }) => {
   return (
     <motion.div
-      layout
+      layout="position"
       onClick={onToggle}
       transition={{
-        layout: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
+        duration: 0.28,
+        ease: [0.25, 0.1, 0.25, 1],
       }}
-      className={`cursor-pointer rounded-3xl p-6 sm:p-8 relative transition-colors duration-300 ${isActive
-          ? "bg-[#72cf24] text-black shadow-[0_10px_30px_rgba(114,207,36,0.15)]"
+      className={`cursor-pointer rounded-3xl p-6 sm:p-8 relative transition-colors duration-200 transform-gpu ${isActive
+          ? "bg-[#72cf24] text-black shadow-lg"
           : "bg-[#18191c] text-white hover:bg-[#202226] border border-white/5"
         }`}
       style={{
-        clipPath: isActive
-          ? "polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px))"
-          : "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px))",
+        clipPath:
+          "polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px))",
       }}
     >
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-6 sm:gap-10">
           <span
-            className={`text-sm sm:text-base font-mono font-medium transition-colors duration-300 ${isActive ? "text-black/70" : "text-neutral-500"
+            className={`text-sm sm:text-base font-mono font-medium transition-colors duration-200 ${isActive ? "text-black/70" : "text-neutral-500"
               }`}
           >
             {item.id}
           </span>
           <h3
-            className={`text-lg sm:text-2xl font-bold tracking-tight transition-colors duration-300 ${isActive ? "text-black" : "text-white"
+            className={`text-lg sm:text-2xl font-bold tracking-tight transition-colors duration-200 ${isActive ? "text-black" : "text-white"
               }`}
           >
             {item.title}
@@ -60,7 +60,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         <Button
           variant="icon"
           aria-label="Toggle Service"
-          className={`w-9 h-9 sm:w-11 sm:h-11 transition-all duration-300 ${isActive
+          className={`w-9 h-9 sm:w-11 sm:h-11 transition-transform duration-200 transform-gpu ${isActive
               ? "bg-black text-[#72cf24] rotate-45"
               : "bg-[#72cf24] text-black rotate-0"
             }`}
@@ -78,19 +78,19 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
               height: "auto",
               opacity: 1,
               transition: {
-                height: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
-                opacity: { duration: 0.25, delay: 0.1 },
+                height: { duration: 0.25, ease: [0.25, 0.1, 0.25, 1] },
+                opacity: { duration: 0.2, delay: 0.05 },
               },
             }}
             exit={{
               height: 0,
               opacity: 0,
               transition: {
-                height: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
-                opacity: { duration: 0.15 },
+                height: { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] },
+                opacity: { duration: 0.1 },
               },
             }}
-            className="overflow-hidden"
+            className="overflow-hidden transform-gpu will-change-[height,opacity]"
           >
             <div className="pt-6 mt-6 border-t border-black/10">
               <div className="flex flex-wrap gap-2 mb-4">

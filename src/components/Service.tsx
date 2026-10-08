@@ -54,8 +54,8 @@ const listContainerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.1,
+      staggerChildren: 0.08,
+      delayChildren: 0.05,
     },
   },
 };
@@ -63,14 +63,14 @@ const listContainerVariants: Variants = {
 const itemDropVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: -35,
+    y: -16,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.55,
-      ease: [0.22, 1, 0.36, 1],
+      duration: 0.35,
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
@@ -88,15 +88,16 @@ export const Services: React.FC = () => {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-12 right-12 md:right-32 w-28 h-28 opacity-25 blur-[10px] rotate-12"
+        className="pointer-events-none absolute top-12 right-12 md:right-32 w-28 h-28 opacity-25 blur-[10px] rotate-12 transform-gpu"
       >
         <svg viewBox="0 0 24 24" className="w-full h-full fill-[#E5E800] drop-shadow-[0_0_20px_rgba(229,232,0,0.8)]">
           <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
         </svg>
       </div>
+
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-24 left-8 md:left-3 w-100 h-100 opacity-20 blur-[30px] -rotate-12"
+        className="pointer-events-none absolute bottom-24 left-8 md:left-3 w-100 h-100 opacity-20 blur-[30px] -rotate-12 transform-gpu"
       >
         <svg viewBox="0 0 24 24" className="w-full h-full fill-[#E5E800] drop-shadow-[0_0_15px_rgba(114,207,36,0.7)]">
           <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
@@ -105,11 +106,11 @@ export const Services: React.FC = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14 transform-gpu"
         >
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -130,11 +131,15 @@ export const Services: React.FC = () => {
           variants={listContainerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.15 }}
-          className="flex flex-col gap-4"
+          viewport={{ once: true, amount: 0.05 }}
+          className="flex flex-col gap-4 transform-gpu"
         >
           {serviceData.map((item, index) => (
-            <motion.div key={item.id} variants={itemDropVariants}>
+            <motion.div
+              key={item.id}
+              variants={itemDropVariants}
+              className="transform-gpu will-change-[transform,opacity]"
+            >
               <ServiceCard
                 item={item}
                 isActive={activeIndex === index}
