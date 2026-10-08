@@ -118,8 +118,8 @@ export const About: React.FC<AboutProps> = ({ photoSrc = "/Profile3.webp" }) => 
             >
               Hey there! I&apos;m{" "}
               <span className="text-white font-semibold">Resyin</span>, a Frontend
-              Developer passionate about turning ideas into high-performance,
-              pixel-perfect digital experiences.
+              Developer passionate about turning ideas into high performance,
+              pixel perfect digital experiences.
             </motion.p>
 
             <motion.p
@@ -128,7 +128,7 @@ export const About: React.FC<AboutProps> = ({ photoSrc = "/Profile3.webp" }) => 
             >
               I specialize in bridging the gap between modern design and scalable
               engineering. Whether building modern SaaS dashboards, interactive
-              Web3 interfaces, or conversion-driven landing pages, I focus on
+              Web3 interfaces, or conversion driven landing pages, I focus on
               aesthetics, smooth interactions, and clean code architecture.
             </motion.p>
 

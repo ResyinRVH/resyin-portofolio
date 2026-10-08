@@ -10,28 +10,28 @@ const serviceData: ServiceItem[] = [
     title: "Custom Web Application & SaaS",
     tags: ["React / Next.js", "State Management", "REST / GraphQL API", "Admin Dashboard"],
     description:
-      "Building high-performance, scalable, and interactive web applications (such as admin dashboards, POS systems, or SaaS platforms) using Next.js and React",
+      "Building high performance, scalable, and interactive web applications (such as admin dashboards, POS systems, or SaaS platforms) using Next.js and React",
   },
   {
     id: "02.",
     title: "Landing Page & Company Profile",
     tags: ["High Conversion", "Responsive Design", "Modern UI", "Copywriting Friendly"],
     description:
-      "Crafting high-converting promotional pages and business profiles focused on clean typography, lightning-fast performance, and modern aesthetics",
+      "Crafting high converting promotional pages and business profiles focused on clean typography, lightning fast performance, and modern aesthetics",
   },
   {
     id: "03.",
     title: "Figma to Code (Pixel-Perfect Slicing)",
     tags: ["Tailwind CSS", "Semantic HTML", "Component-Driven", "Clean Architecture"],
     description:
-      "Translating Figma design interfaces into pixel-perfect, fully responsive, and maintainable front-end code using Tailwind CSS",
+      "Translating Figma design interfaces into pixel perfect, fully responsive, and maintainable frontend code using Tailwind CSS",
   },
   {
     id: "04.",
     title: "E-Commerce & Digital Ordering System",
     tags: ["Product Catalog", "Cart System", "Digital Menu", "Checkout Flow"],
     description:
-      "Developing seamless product catalogs, café/restaurant digital menus, shopping carts, and intuitive online ordering experiences",
+      "Developing seamless product catalogs, cafe/restaurant digital menus, shopping carts, and intuitive online ordering experiences",
   },
   {
     id: "05.",
@@ -45,7 +45,7 @@ const serviceData: ServiceItem[] = [
     title: "Performance & SEO Optimization",
     tags: ["Core Web Vitals", "On-Page SEO", "Fast Image Load", "SSR & SSG"],
     description:
-      "Optimizing load speeds, cross-device responsiveness, and clean code architecture for superior Core Web Vitals and search engine indexing",
+      "Optimizing load speeds, cross device responsiveness, and clean code architecture for superior Core Web Vitals and search engine indexing",
   },
 ];
 
