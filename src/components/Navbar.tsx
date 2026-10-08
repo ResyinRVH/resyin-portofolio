@@ -105,7 +105,7 @@ export const Navbar: React.FC = () => {
           RESYIN
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 lg:gap-20 text-xl font-medium">
+        <nav className="hidden md:flex items-center gap-8 lg:gap-15 text-md font-medium">
           {navLinks.map((link) => {
             const isHome = link.name === "Home";
             const isActive = activeSection === link.href.replace("#", "");
