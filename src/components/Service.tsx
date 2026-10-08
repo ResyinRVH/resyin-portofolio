@@ -21,7 +21,7 @@ const serviceData: ServiceItem[] = [
   },
   {
     id: "03.",
-    title: "Figma to Code (Pixel-Perfect Slicing)",
+    title: "Figma to Code Pixel Perfect Slicing",
     tags: ["Tailwind CSS", "Semantic HTML", "Component-Driven", "Clean Architecture"],
     description:
       "Translating Figma design interfaces into pixel perfect, fully responsive, and maintainable frontend code using Tailwind CSS",
