@@ -6,7 +6,7 @@ import { Button } from "@/ui/Button";
 export interface ProjectItem {
     id: string;
     title: string;
-    category: "Development" | "UI/UX Design" | "Web3" | "Fullstack";
+    category: "Saas" | "Landing Page" | "Web3" | "Dashboard";
     image: string;
     link?: string;
     liveUrl?: string;
