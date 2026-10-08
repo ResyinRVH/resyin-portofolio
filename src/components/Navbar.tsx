@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-10 lg:px-20 transition-all duration-300 ${isScrolled || isMobileMenuOpen
+        className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-10 lg:px-40 transition-all duration-300 ${isScrolled || isMobileMenuOpen
           ? "bg-[#0c0d0f]/90 backdrop-blur-md py-4 shadow-lg"
           : "bg-transparent py-5 sm:py-6"
           }`}
@@ -100,12 +100,12 @@ export const Navbar: React.FC = () => {
         <Link
           href="#home"
           onClick={(e) => handleNavClick(e, "#home")}
-          className="text-xl sm:text-2xl font-extrabold tracking-wider bg-gradient-to-r from-[#6EC024] to-[#E5E800] bg-clip-text text-transparent hover:opacity-90 transition-opacity select-none"
+          className="text-xl sm:text-3xl font-extrabold tracking-wider bg-gradient-to-r from-[#6EC024] to-[#E5E800] bg-clip-text text-transparent hover:opacity-90 transition-opacity select-none"
         >
           RESYIN
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 lg:gap-14 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-8 lg:gap-20 text-xl font-medium">
           {navLinks.map((link) => {
             const isHome = link.name === "Home";
             const isActive = activeSection === link.href.replace("#", "");
