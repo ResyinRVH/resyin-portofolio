@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Tag } from "@/ui/TagService";
 import { Button } from "@/ui/Button";
 
@@ -22,13 +25,16 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
   onToggle,
 }) => {
   return (
-    <div
+    <motion.div
+      layout
       onClick={onToggle}
-      className={`cursor-pointer transition-all duration-300 rounded-3xl p-6 sm:p-8 relative ${
-        isActive
+      transition={{
+        layout: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] },
+      }}
+      className={`cursor-pointer rounded-3xl p-6 sm:p-8 relative transition-colors duration-300 ${isActive
           ? "bg-[#72cf24] text-black shadow-[0_10px_30px_rgba(114,207,36,0.15)]"
           : "bg-[#18191c] text-white hover:bg-[#202226] border border-white/5"
-      }`}
+        }`}
       style={{
         clipPath: isActive
           ? "polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px))"
@@ -38,16 +44,14 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-6 sm:gap-10">
           <span
-            className={`text-sm sm:text-base font-mono font-medium ${
-              isActive ? "text-black/70" : "text-neutral-500"
-            }`}
+            className={`text-sm sm:text-base font-mono font-medium transition-colors duration-300 ${isActive ? "text-black/70" : "text-neutral-500"
+              }`}
           >
             {item.id}
           </span>
           <h3
-            className={`text-lg sm:text-2xl font-bold tracking-tight ${
-              isActive ? "text-black" : "text-white"
-            }`}
+            className={`text-lg sm:text-2xl font-bold tracking-tight transition-colors duration-300 ${isActive ? "text-black" : "text-white"
+              }`}
           >
             {item.title}
           </h3>
@@ -56,28 +60,51 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
         <Button
           variant="icon"
           aria-label="Toggle Service"
-          className={`w-9 h-9 sm:w-11 sm:h-11 ${
-            isActive
+          className={`w-9 h-9 sm:w-11 sm:h-11 transition-all duration-300 ${isActive
               ? "bg-black text-[#72cf24] rotate-45"
-              : "bg-[#72cf24] text-black"
-          }`}
+              : "bg-[#72cf24] text-black rotate-0"
+            }`}
         >
           <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
         </Button>
       </div>
 
-      {isActive && (
-        <div className="pt-6 mt-6 border-t border-black/10">
-          <div className="flex flex-wrap gap-2 mb-4">
-            {item.tags.map((tag, tIdx) => (
-              <Tag key={tIdx} label={tag} />
-            ))}
-          </div>
-          <p className="text-sm sm:text-base text-black/85 leading-relaxed max-w-3xl">
-            {item.description}
-          </p>
-        </div>
-      )}
-    </div>
+      <AnimatePresence initial={false}>
+        {isActive && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{
+              height: "auto",
+              opacity: 1,
+              transition: {
+                height: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
+                opacity: { duration: 0.25, delay: 0.1 },
+              },
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              transition: {
+                height: { duration: 0.3, ease: [0.25, 0.1, 0.25, 1] },
+                opacity: { duration: 0.15 },
+              },
+            }}
+            className="overflow-hidden"
+          >
+            <div className="pt-6 mt-6 border-t border-black/10">
+              <div className="flex flex-wrap gap-2 mb-4">
+                {item.tags.map((tag, tIdx) => (
+                  <Tag key={tIdx} label={tag} />
+                ))}
+              </div>
+              <p className="text-sm sm:text-base text-black/85 leading-relaxed max-w-3xl">
+                {item.description}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };

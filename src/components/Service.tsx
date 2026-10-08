@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { motion, type Variants } from "framer-motion";
 import { ServiceCard, ServiceItem } from "@/ui/ServiceCard";
 
 const serviceData: ServiceItem[] = [
@@ -48,6 +49,32 @@ const serviceData: ServiceItem[] = [
   },
 ];
 
+const listContainerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemDropVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    y: -35,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.55,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 export const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
   const toggleAccordion = (index: number) => {
@@ -77,7 +104,13 @@ export const Services: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
+        >
           <div>
             <div className="flex items-center gap-2 mb-3">
               <span className="text-xs uppercase tracking-widest text-neutral-400 font-medium">
@@ -91,18 +124,25 @@ export const Services: React.FC = () => {
               </span>
             </h2>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-4">
+        <motion.div
+          variants={listContainerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          className="flex flex-col gap-4"
+        >
           {serviceData.map((item, index) => (
-            <ServiceCard
-              key={item.id}
-              item={item}
-              isActive={activeIndex === index}
-              onToggle={() => toggleAccordion(index)}
-            />
+            <motion.div key={item.id} variants={itemDropVariants}>
+              <ServiceCard
+                item={item}
+                isActive={activeIndex === index}
+                onToggle={() => toggleAccordion(index)}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
