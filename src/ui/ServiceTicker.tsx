@@ -12,7 +12,7 @@ const services = [
 
 export const ServiceTicker: React.FC = () => {
   return (
-    <div className="relative z-20 w-full overflow-hidden py-4 bg-[#141518] -rotate-4 -mt-10 sm:-mt-2 shadow-lg">
+    <div className="relative z-20 w-full overflow-hidden py-4 bg-[#141518] -mt-10 sm:-mt-2 shadow-lg">
       <div className="flex items-center justify-around gap-8 whitespace-nowrap text-xs sm:text-sm text-neutral-300 font-medium px-4">
         {services.map((item, index) => (
           <div key={index} className="flex items-center gap-3">
