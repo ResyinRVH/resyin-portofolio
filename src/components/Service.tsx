@@ -35,7 +35,7 @@ const serviceData: ServiceItem[] = [
   },
   {
     id: "05.",
-    title: "Web3 Front-End Integration",
+    title: "Web3 Frontend Integration",
     tags: ["Wallet Connection", "Smart Contract Calls", "ethers.js / wagmi", "DApp UI"],
     description:
       "Designing responsive Web3 interfaces seamlessly connected to smart contracts, wallet integrations, and decentralized ecosystems",
